@@ -76,12 +76,12 @@ a {
 .page-content {
   width: min(100% - 2.5rem, 1440px);
   margin: 0 auto;
-  padding: clamp(4.5rem, 9vw, 8rem) 0 6rem;
+  padding: clamp(2rem, 3.5vw, 3.25rem) 0 6rem;
 }
 
 .intro {
   max-width: 700px;
-  margin-bottom: 4.5rem;
+  margin-bottom: 3.25rem;
 }
 
 .eyebrow {
@@ -223,7 +223,7 @@ h1 {
   }
   .page-content {
     width: min(100% - 2rem, 1440px);
-    padding-top: 4rem;
+    padding-top: 1.75rem;
   }
   .intro {
     margin-bottom: 3rem;
