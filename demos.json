@@ -3,12 +3,12 @@
     "name": "PharmaSpot",
     "description": "Explore a connected view of pharmaceutical supply chain performance.",
     "industry": "Pharma Supply Chain",
-    "url": "https://pharmaspot.vercel.app/",
+    "url": "https://pharmaspot.se.thoughtspot.com/",
     "color-background": "#2e1065",
     "color-text": "#f6f1ff"
   },
   {
-    "name": "SalesSpot",
+    "name": "SalesSpot (coming soon)",
     "description": "See the signals shaping modern retail operations and growth.",
     "industry": "Retail Sales",
     "url": "https://example.com/retailpulse",
@@ -16,7 +16,7 @@
     "color-text": "#4a2c16"
   },
   {
-    "name": "FinSpot",
+    "name": "FinSpot (coming soon)",
     "description": "Bring financial performance, planning, and risk into focus.",
     "industry": "Financial Services",
     "url": "https://example.com/finsight",
@@ -24,7 +24,7 @@
     "color-text": "#1c315d"
   },
   {
-    "name": "IoTSpot",
+    "name": "IoTSpot (coming soon)",
     "description": "Understand the health of your devices.",
     "industry": "IoT/Manufacturing",
     "url": "https://example.com/careconnect",

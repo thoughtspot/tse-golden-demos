@@ -1,4 +1,5 @@
 import demos from "../demos.json";
+import Image from "next/image";
 import Link from "next/link";
 
 type Demo = {
@@ -15,7 +16,14 @@ export default function Home() {
     <div className="site-shell">
       <header className="site-header">
         <Link className="brand" href="/" aria-label="Golden Demos home">
-          <span className="brand-mark">TS</span>
+          <Image
+            className="brand-mark"
+            src="/ts.png"
+            alt=""
+            width={32}
+            height={32}
+            priority
+          />
           <span>Golden Demos</span>
         </Link>
         <span className="header-status">PMM / Prod org</span>

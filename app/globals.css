@@ -60,16 +60,9 @@ a {
 }
 
 .brand-mark {
-  display: grid;
   width: 32px;
   height: 32px;
-  place-items: center;
   border-radius: 9px;
-  background: #173f3b;
-  color: #d9f3ee;
-  font-size: 0.7rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
 }
 
 .header-status {
