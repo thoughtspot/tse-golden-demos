@@ -9,7 +9,7 @@ The demo list is data, not code: everything on the page comes from
 [demos.json](demos.json). Adding, editing, or removing a demo means editing that
 one file.
 
-Viewers must already be logged into PMM in the Prod org for the linked demos to
+Viewers must already be logged into PMM in the Primary org for the linked demos to
 load; the app itself does no authentication.
 
 ## Stack
@@ -52,14 +52,14 @@ Append an object to the array in [demos.json](demos.json):
 }
 ```
 
-| Field | Purpose |
-| --- | --- |
-| `name` | Tile heading. Also the sort key — tiles render alphabetically, not in file order. |
-| `description` | One sentence under the heading. Keep it to a line or two so tiles stay the same height. |
-| `industry` | Small label across the top of the tile. |
-| `url` | Where the tile links. Opens in a new tab. |
-| `color-background` | Tile background color (any CSS color; hex is what the existing entries use). |
-| `color-text` | Text color used on that background. |
+| Field              | Purpose                                                                                 |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| `name`             | Tile heading. Also the sort key — tiles render alphabetically, not in file order.       |
+| `description`      | One sentence under the heading. Keep it to a line or two so tiles stay the same height. |
+| `industry`         | Small label across the top of the tile.                                                 |
+| `url`              | Where the tile links. Opens in a new tab.                                               |
+| `color-background` | Tile background color (any CSS color; hex is what the existing entries use).            |
+| `color-text`       | Text color used on that background.                                                     |
 
 Supply all six fields. The `Demo` type in [app/page.tsx](app/page.tsx) is
 applied with a cast, so a missing field won't fail the build or the typecheck —
@@ -82,11 +82,11 @@ read well, and the link opens the right demo.
 
 ## Project layout
 
-| Path | What it is |
-| --- | --- |
-| [demos.json](demos.json) | The demo list — the only file you edit to change what's on the page. |
-| [app/page.tsx](app/page.tsx) | Home page: header, intro copy, and the tile grid. |
-| [app/layout.tsx](app/layout.tsx) | Root layout, fonts, and page metadata. |
+| Path                               | What it is                                                                 |
+| ---------------------------------- | -------------------------------------------------------------------------- |
+| [demos.json](demos.json)           | The demo list — the only file you edit to change what's on the page.       |
+| [app/page.tsx](app/page.tsx)       | Home page: header, intro copy, and the tile grid.                          |
+| [app/layout.tsx](app/layout.tsx)   | Root layout, fonts, and page metadata.                                     |
 | [app/globals.css](app/globals.css) | All site styling, including the tile styles driven by the per-demo colors. |
-| [public/ts.png](public/ts.png) | ThoughtSpot brand mark in the header. |
-| [app/icon.png](app/icon.png) | Favicon. |
+| [public/ts.png](public/ts.png)     | ThoughtSpot brand mark in the header.                                      |
+| [app/icon.png](app/icon.png)       | Favicon.                                                                   |

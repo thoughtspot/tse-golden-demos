@@ -26,7 +26,7 @@ export default function Home() {
           />
           <span>Golden Demos</span>
         </Link>
-        <span className="header-status">PMM / Prod org</span>
+        <span className="header-status">PMM / Primary org</span>
       </header>
 
       <main className="page-content">
@@ -35,7 +35,7 @@ export default function Home() {
           <h1 id="page-title">Choose a demo to explore.</h1>
           <p className="intro-copy">
             Select a tile below to open a guided experience. You must already be
-            logged into PMM in the Prod org to access these demos.
+            logged into PMM in the Primary org to access these demos.
           </p>
         </section>
 
