@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TSE Golden Demos
 
-## Getting Started
+A single-page launcher for the ThoughtSpot Golden Demos. The site renders one
+tile per demo — industry, name, description, and a link that opens the demo in a
+new tab — so anyone can find and open the right showcase without hunting for
+URLs.
 
-First, run the development server:
+The demo list is data, not code: everything on the page comes from
+[demos.json](demos.json). Adding, editing, or removing a demo means editing that
+one file.
+
+Viewers must already be logged into PMM in the Prod org for the linked demos to
+load; the app itself does no authentication.
+
+## Stack
+
+- Next.js 16 (App Router) with React 19
+- TypeScript
+- Tailwind CSS v4 plus hand-written styles in [app/globals.css](app/globals.css)
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The page hot-reloads as you
+edit [app/page.tsx](app/page.tsx), [app/globals.css](app/globals.css), or
+[demos.json](demos.json).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # eslint
+```
 
-## Learn More
+## Adding a new demo
 
-To learn more about Next.js, take a look at the following resources:
+Append an object to the array in [demos.json](demos.json):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```json
+{
+  "name": "PharmaSpot",
+  "description": "Explore a connected view of pharmaceutical supply chain performance.",
+  "industry": "Pharma Supply Chain",
+  "url": "https://pharmaspot.se.thoughtspot.com/",
+  "color-background": "#2e1065",
+  "color-text": "#f6f1ff"
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Field | Purpose |
+| --- | --- |
+| `name` | Tile heading. Also the sort key — tiles render alphabetically, not in file order. |
+| `description` | One sentence under the heading. Keep it to a line or two so tiles stay the same height. |
+| `industry` | Small label across the top of the tile. |
+| `url` | Where the tile links. Opens in a new tab. |
+| `color-background` | Tile background color (any CSS color; hex is what the existing entries use). |
+| `color-text` | Text color used on that background. |
 
-## Deploy on Vercel
+Supply all six fields. The `Demo` type in [app/page.tsx](app/page.tsx) is
+applied with a cast, so a missing field won't fail the build or the typecheck —
+it just renders as an empty heading or an unstyled tile.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Guidelines:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Pick a readable color pair.** `color-text` sits directly on
+  `color-background`, so check the contrast. Existing tiles pair a saturated
+  dark background with near-white text, or a pastel background with a deep
+  version of the same hue.
+- **Mark work in progress.** Demos that aren't live yet use the suffix
+  ` (coming soon)` in the `name` and a placeholder `url`. Drop the suffix and
+  swap in the real URL when the demo ships.
+- **No code changes needed.** Tile ordering, animation stagger, and layout are
+  all handled by the page; you only supply data.
+
+After editing, run `npm run dev` and confirm the new tile renders, the colors
+read well, and the link opens the right demo.
+
+## Project layout
+
+| Path | What it is |
+| --- | --- |
+| [demos.json](demos.json) | The demo list — the only file you edit to change what's on the page. |
+| [app/page.tsx](app/page.tsx) | Home page: header, intro copy, and the tile grid. |
+| [app/layout.tsx](app/layout.tsx) | Root layout, fonts, and page metadata. |
+| [app/globals.css](app/globals.css) | All site styling, including the tile styles driven by the per-demo colors. |
+| [public/ts.png](public/ts.png) | ThoughtSpot brand mark in the header. |
+| [app/icon.png](app/icon.png) | Favicon. |
