@@ -1,34 +1,26 @@
 [
   {
     "name": "PharmaSpot",
-    "description": "Explore a connected view of pharmaceutical supply chain performance.",
+    "description": "Visibility across your pharma supply chain.",
     "industry": "Pharma Supply Chain",
     "url": "https://pharmaspot.se.thoughtspot.com/",
     "color-background": "#2e1065",
     "color-text": "#f6f1ff"
   },
   {
-    "name": "SalesSpot (coming soon)",
-    "description": "See the signals shaping modern retail operations and growth.",
+    "name": "SalesSpot",
+    "description": "Pipeline performance, team activity, and AI-powered answers — all in one place.",
     "industry": "Retail Sales",
-    "url": "https://example.com/retailpulse",
-    "color-background": "#ffe4c7",
-    "color-text": "#4a2c16"
+    "url": "https://salesspot.se.thoughtspot.com/",
+    "color-background": "#1a3a2b",
+    "color-text": "#eef7f1"
   },
   {
-    "name": "FinSpot (coming soon)",
-    "description": "Bring financial performance, planning, and risk into focus.",
-    "industry": "Financial Services",
-    "url": "https://example.com/finsight",
+    "name": "Even more coming soon",
+    "description": "Multiple industries being added.",
+    "industry": "Other",
+    "url": "",
     "color-background": "#dce8fb",
     "color-text": "#1c315d"
-  },
-  {
-    "name": "IoTSpot (coming soon)",
-    "description": "Understand the health of your devices.",
-    "industry": "IoT/Manufacturing",
-    "url": "https://example.com/careconnect",
-    "color-background": "#f5dced",
-    "color-text": "#542744"
   }
 ]
