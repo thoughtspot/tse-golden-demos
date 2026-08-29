@@ -56,8 +56,8 @@ Append an object to the array in [demos.json](demos.json):
 | ------------------ | --------------------------------------------------------------------------------------- |
 | `name`             | Tile heading. Also the sort key — tiles render alphabetically, not in file order.       |
 | `description`      | One sentence under the heading. Keep it to a line or two so tiles stay the same height. |
-| `industry`         | Small label across the top of the tile.                                                 |
-| `url`              | Where the tile links. Opens in a new tab.                                               |
+| `industry`         | Small label across the top of the tile. The value `Other` is special — see below.       |
+| `url`              | Where the tile links. Opens in a new tab. Ignored for an `Other` tile, which has no link. |
 | `color-background` | Tile background color (any CSS color; hex is what the existing entries use).            |
 | `color-text`       | Text color used on that background.                                                     |
 
@@ -71,9 +71,13 @@ Guidelines:
   `color-background`, so check the contrast. Existing tiles pair a saturated
   dark background with near-white text, or a pastel background with a deep
   version of the same hue.
-- **Mark work in progress.** Demos that aren't live yet use the suffix
-  ` (coming soon)` in the `name` and a placeholder `url`. Drop the suffix and
-  swap in the real URL when the demo ships.
+- **Only list live demos.** Every entry should point at a real, reachable demo
+  URL. Don't add a tile with a placeholder or example URL for something that
+  hasn't shipped — add it when it goes live.
+- **The `Other` tile is the exception.** A single entry with
+  `"industry": "Other"` acts as the catch-all: it always renders last, ignores
+  `url`, and renders as plain markup rather than a link, so there's nothing to
+  click. Its CTA reads "Coming soon" instead of "Open demo".
 - **No code changes needed.** Tile ordering, animation stagger, and layout are
   all handled by the page; you only supply data.
 

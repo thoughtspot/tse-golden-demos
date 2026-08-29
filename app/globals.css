@@ -159,6 +159,19 @@ h1 {
   outline-offset: 4px;
 }
 
+.demo-tile-static {
+  cursor: default;
+}
+
+.demo-tile-static:hover {
+  transform: none;
+  box-shadow: 0 14px 32px rgba(29, 41, 39, 0.05);
+}
+
+.demo-tile-static .tile-topline {
+  min-height: 1.6rem;
+}
+
 .tile-topline {
   display: flex;
   align-items: center;
