@@ -116,6 +116,11 @@ h1 {
   line-height: 1.7;
 }
 
+.intro-emphasis {
+  color: var(--foreground);
+  font-weight: 650;
+}
+
 .demo-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
