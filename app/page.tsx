@@ -47,8 +47,8 @@ export default function Home() {
           <p className="intro-copy">
             Select a tile below to open a guided experience.{" "}
             <strong className="intro-emphasis">
-              You must already be logged into PMM in the Primary org to access
-              these demos.
+              You must be on Twingate VPN and already logged into PMM in the
+              Primary org to access these demos.
             </strong>
           </p>
         </section>
