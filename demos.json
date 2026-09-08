@@ -3,7 +3,7 @@
     "name": "PharmaSpot",
     "description": "Visibility across your pharma supply chain.",
     "industry": "Pharma Supply Chain",
-    "url": "https://pharmaspot.se.thoughtspot.com/",
+    "url": "https://pharmaspot.se.thoughtspot.com",
     "color-background": "#2e1065",
     "color-text": "#f6f1ff"
   },
@@ -11,9 +11,33 @@
     "name": "SalesSpot",
     "description": "Pipeline performance, team activity, and AI-powered answers — all in one place.",
     "industry": "Sales Operations",
-    "url": "https://salesspot.se.thoughtspot.com/",
+    "url": "https://salesspot.se.thoughtspot.com",
     "color-background": "#1a3a2b",
     "color-text": "#eef7f1"
+  },
+  {
+    "name": "Fulcra",
+    "description": "",
+    "industry": "IoT / Manufacturing",
+    "url": "https://tse-demo-manufacturing-fulcra.se.thoughtspot.com",
+    "color-background": "#e7e7f2",
+    "color-text": "#161a26"
+  },
+  {
+    "name": "Forepost",
+    "description": "",
+    "industry": "Corporate Finance",
+    "url": "https://tse-demo-corp-fin-forepost.se.thoughtspot.com",
+    "color-background": "#e9f4c6",
+    "color-text": "#1b2110"
+  },
+  {
+    "name": "Cryonome",
+    "description": "",
+    "industry": "Pharma Supply Chain",
+    "url": "https://tse-demo-pharma-supply-cryonome.se.thoughtspot.com",
+    "color-background": "#0b1210",
+    "color-text": "#7ee7c0"
   },
   {
     "name": "Even more coming soon",
