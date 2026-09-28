@@ -1,5 +1,45 @@
 [
   {
+    "name": "Cohortline",
+    "description": "Enrollment, site visits, and deviations across multi-site pharma trials — on one line.",
+    "industry": "Pharma Clinical Trials",
+    "url": "https://tse-demo-pharma-trials-cohortline.se.thoughtspot.com",
+    "color-background": "#f5edd6",
+    "color-text": "#111111"
+  },
+  {
+    "name": "Cryonome",
+    "description": "",
+    "industry": "Pharma Supply Chain",
+    "url": "https://tse-demo-pharma-supply-cryonome.se.thoughtspot.com",
+    "color-background": "#0b1210",
+    "color-text": "#7ee7c0"
+  },
+  {
+    "name": "Forepost",
+    "description": "",
+    "industry": "Corporate Finance",
+    "url": "https://tse-demo-corp-fin-forepost.se.thoughtspot.com",
+    "color-background": "#e9f4c6",
+    "color-text": "#1b2110"
+  },
+  {
+    "name": "Fulcra",
+    "description": "",
+    "industry": "IoT / Manufacturing",
+    "url": "https://tse-demo-manufacturing-fulcra.se.thoughtspot.com",
+    "color-background": "#e7e7f2",
+    "color-text": "#161a26"
+  },
+  {
+    "name": "Ledgerwise",
+    "description": "Analytics and regulatory reporting on top of every core you run.",
+    "industry": "Core Banking",
+    "url": "https://tse-demo-banking-ledgerwise.se.thoughtspot.com",
+    "color-background": "#f0ece3",
+    "color-text": "#16140f"
+  },
+  {
     "name": "PharmaSpot",
     "description": "Visibility across your pharma supply chain.",
     "industry": "Pharma Supply Chain",
@@ -14,30 +54,6 @@
     "url": "https://salesspot.se.thoughtspot.com",
     "color-background": "#1a3a2b",
     "color-text": "#eef7f1"
-  },
-  {
-    "name": "Fulcra",
-    "description": "",
-    "industry": "IoT / Manufacturing",
-    "url": "https://tse-demo-manufacturing-fulcra.se.thoughtspot.com",
-    "color-background": "#e7e7f2",
-    "color-text": "#161a26"
-  },
-  {
-    "name": "Forepost",
-    "description": "",
-    "industry": "Corporate Finance",
-    "url": "https://tse-demo-corp-fin-forepost.se.thoughtspot.com",
-    "color-background": "#e9f4c6",
-    "color-text": "#1b2110"
-  },
-  {
-    "name": "Cryonome",
-    "description": "",
-    "industry": "Pharma Supply Chain",
-    "url": "https://tse-demo-pharma-supply-cryonome.se.thoughtspot.com",
-    "color-background": "#0b1210",
-    "color-text": "#7ee7c0"
   },
   {
     "name": "Even more coming soon",
