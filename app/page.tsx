@@ -1,17 +1,14 @@
 import demos from "../demos.json";
 import Image from "next/image";
 import Link from "next/link";
-
-type Demo = {
-  name: string;
-  description: string;
-  industry: string;
-  url: string;
-  "color-background": string;
-  "color-text": string;
-};
+import DemoBrowser, { type Demo } from "./demo-browser";
 
 const OTHER_INDUSTRY = "Other";
+
+const CHECKLIST = [
+  "Connected to Twingate VPN",
+  "Logged into PMM in the Primary org",
+];
 
 export default function Home() {
   const orderedDemos = [...(demos as Demo[])].sort((a, b) => {
@@ -26,87 +23,59 @@ export default function Home() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <Link className="brand" href="/" aria-label="Golden Demos home">
-          <Image
-            className="brand-mark"
-            src="/ts.png"
-            alt=""
-            width={32}
-            height={32}
-            priority
-          />
-          <span>Golden Demos</span>
-        </Link>
-        <span className="header-status">PMM / Primary org</span>
+        <div className="site-header-inner">
+          <Link className="brand" href="/" aria-label="TSE Golden Demos home">
+            <Image
+              className="brand-mark"
+              src="/ts.png"
+              alt=""
+              width={32}
+              height={32}
+              priority
+            />
+            <span>TSE Golden Demos</span>
+          </Link>
+          <span className="header-status">PMM / Primary org</span>
+        </div>
       </header>
 
       <main className="page-content">
         <section className="intro" aria-labelledby="page-title">
-          <p className="eyebrow">ThoughtSpot showcase</p>
-          <h1 id="page-title">Choose a demo to explore.</h1>
-          <p className="intro-copy">
-            Select a tile below to open a guided experience.{" "}
-            <strong className="intro-emphasis">
-              You must be on Twingate VPN and already logged into PMM in the
-              Primary org to access these demos.
-            </strong>
-          </p>
-        </section>
-
-        <section className="demo-grid" aria-label="Available demos">
-          {orderedDemos.map((demo, index) => {
-            const isOther = demo.industry === OTHER_INDUSTRY;
-            const tileStyle = {
-              "--tile-background": demo["color-background"],
-              "--tile-text": demo["color-text"],
-              "--tile-delay": `${index * 70}ms`,
-            } as React.CSSProperties;
-            const tileBody = (
-              <>
-                <div className="tile-topline">
-                  <span className="tile-industry">{demo.industry}</span>
-                  {!isOther && (
-                    <span className="tile-arrow" aria-hidden="true">
-                      ↗
-                    </span>
-                  )}
-                </div>
-                <div>
-                  <h2>{demo.name}</h2>
-                  <p>{demo.description}</p>
-                </div>
-                <span className="tile-cta">
-                  {isOther ? "Coming soon" : "Open demo"}
-                </span>
-              </>
-            );
-
-            if (isOther) {
-              return (
-                <div
-                  className="demo-tile demo-tile-static"
-                  key={demo.name}
-                  style={tileStyle}
+          <div className="intro-text">
+            <p className="eyebrow">ThoughtSpot showcase</p>
+            <h1 id="page-title">Choose a demo to explore.</h1>
+            <p className="intro-copy">
+              Every tile has the live demo, a recorded walkthrough, and (soon)
+              the talk track — so you can prep in minutes.
+            </p>
+          </div>
+          <aside className="checklist" aria-labelledby="checklist-title">
+            <p className="checklist-title" id="checklist-title">
+              Before you open a demo
+            </p>
+            {CHECKLIST.map((item) => (
+              <div className="checklist-item" key={item}>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  {tileBody}
-                </div>
-              );
-            }
-
-            return (
-              <a
-                className="demo-tile"
-                href={demo.url}
-                key={demo.name}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={tileStyle}
-              >
-                {tileBody}
-              </a>
-            );
-          })}
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M8 12.5l2.5 2.5L16 9.5" />
+                </svg>
+                <span>{item}</span>
+              </div>
+            ))}
+          </aside>
         </section>
+
+        <DemoBrowser demos={orderedDemos} />
       </main>
     </div>
   );

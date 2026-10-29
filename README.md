@@ -46,7 +46,10 @@ Append an object to the array in [demos.json](demos.json):
   "name": "PharmaSpot",
   "description": "Explore a connected view of pharmaceutical supply chain performance.",
   "industry": "Pharma Supply Chain",
+  "filter-categories": ["Pharma", "Supply Chain"],
   "url": "https://pharmaspot.se.thoughtspot.com/",
+  "video-url": "",
+  "has-config": false,
   "color-background": "#2e1065",
   "color-text": "#f6f1ff"
 }
@@ -54,14 +57,18 @@ Append an object to the array in [demos.json](demos.json):
 
 | Field              | Purpose                                                                                 |
 | ------------------ | --------------------------------------------------------------------------------------- |
-| `name`             | Tile heading. Also the sort key — tiles render alphabetically, not in file order.       |
+| `name`             | Demo name shown under the card heading. Also the sort key — tiles render alphabetically, not in file order.       |
 | `description`      | One sentence under the heading. Keep it to a line or two so tiles stay the same height. |
-| `industry`         | Small label across the top of the tile. The value `Other` is special — see below.       |
+| `industry`         | Card heading. The value `Other` is special — see below.       |
+| `filter-categories` | Array of filter chip labels this demo appears under. Chips are the unique values across all demos, A–Z. Use `[]` for none. |
 | `url`              | Where the tile links. Opens in a new tab. Ignored for an `Other` tile, which has no link. |
+| `video-url`        | Walkthrough video link. Empty string shows a disabled "Soon" button.                    |
+| `has-config`       | `true` adds a "Demo configuration" link to `url` + `/config`.                           |
+| `script-url`       | Optional. Add the key to show a second "Script" button; empty string shows "Soon".      |
 | `color-background` | Tile background color (any CSS color; hex is what the existing entries use).            |
 | `color-text`       | Text color used on that background.                                                     |
 
-Supply all six fields. The `Demo` type in [app/page.tsx](app/page.tsx) is
+Supply every field except `script-url`. The `Demo` type in [app/demo-browser.tsx](app/demo-browser.tsx) is
 applied with a cast, so a missing field won't fail the build or the typecheck —
 it just renders as an empty heading or an unstyled tile.
 
@@ -77,7 +84,7 @@ Guidelines:
 - **The `Other` tile is the exception.** A single entry with
   `"industry": "Other"` acts as the catch-all: it always renders last, ignores
   `url`, and renders as plain markup rather than a link, so there's nothing to
-  click. Its CTA reads "Coming soon" instead of "Open demo".
+  click. It shows "Coming soon" instead of the buttons.
 - **No code changes needed.** Tile ordering, animation stagger, and layout are
   all handled by the page; you only supply data.
 
@@ -89,7 +96,8 @@ read well, and the link opens the right demo.
 | Path                               | What it is                                                                 |
 | ---------------------------------- | -------------------------------------------------------------------------- |
 | [demos.json](demos.json)           | The demo list — the only file you edit to change what's on the page.       |
-| [app/page.tsx](app/page.tsx)       | Home page: header, intro copy, and the tile grid.                          |
+| [app/page.tsx](app/page.tsx)       | Home page: header, intro copy, and the prerequisites checklist.            |
+| [app/demo-browser.tsx](app/demo-browser.tsx) | Client component: industry filter chips and the demo cards.      |
 | [app/layout.tsx](app/layout.tsx)   | Root layout, fonts, and page metadata.                                     |
 | [app/globals.css](app/globals.css) | All site styling, including the tile styles driven by the per-demo colors. |
 | [public/ts.png](public/ts.png)     | ThoughtSpot brand mark in the header.                                      |
