@@ -3,31 +3,53 @@
     "name": "Cohortline",
     "description": "Enrollment, site visits, and deviations across multi-site pharma trials — on one line.",
     "industry": "Pharma Clinical Trials",
+    "filter-categories": [
+      "Pharma"
+    ],
     "url": "https://tse-demo-pharma-trials-cohortline.se.thoughtspot.com",
+    "video-url": "https://www.loom.com/share/50fece32a3524dad902bd1c9a3bc9f6e",
+    "has-config": true,
     "color-background": "#f5edd6",
     "color-text": "#111111"
   },
   {
     "name": "Cryonome",
-    "description": "",
+    "description": "Cryonome is a pharmaceutical supply chain control tower.",
     "industry": "Pharma Supply Chain",
+    "filter-categories": [
+      "Pharma",
+      "Supply Chain"
+    ],
     "url": "https://tse-demo-pharma-supply-cryonome.se.thoughtspot.com",
+    "video-url": "https://www.loom.com/share/3118dd2b3429464380997a6b0118f03e",
+    "has-config": true,
     "color-background": "#0b1210",
     "color-text": "#7ee7c0"
   },
   {
     "name": "Forepost",
-    "description": "",
+    "description": "Forepost is a financial planning & analysis (FP&A) platform.",
     "industry": "Corporate Finance",
+    "filter-categories": [
+      "Finance"
+    ],
     "url": "https://tse-demo-corp-fin-forepost.se.thoughtspot.com",
+    "video-url": "https://www.loom.com/share/dfef87b984984160a488dc702338aac6",
+    "has-config": true,
     "color-background": "#e9f4c6",
     "color-text": "#1b2110"
   },
   {
     "name": "Fulcra",
-    "description": "",
+    "description": "Fulcra is a Computerized Maintenance Management System (CMMS).",
     "industry": "IoT / Manufacturing",
+    "filter-categories": [
+      "Manufacturing",
+      "IoT"
+    ],
     "url": "https://tse-demo-manufacturing-fulcra.se.thoughtspot.com",
+    "video-url": "https://www.loom.com/share/4c6d0977ca6043b6863a836ce7ec99bb",
+    "has-config": true,
     "color-background": "#e7e7f2",
     "color-text": "#161a26"
   },
@@ -35,15 +57,67 @@
     "name": "Ledgerwise",
     "description": "Analytics and regulatory reporting on top of every core you run.",
     "industry": "Core Banking",
+    "filter-categories": [
+      "Banking",
+      "Finance"
+    ],
     "url": "https://tse-demo-banking-ledgerwise.se.thoughtspot.com",
+    "video-url": "https://www.loom.com/share/c95aa1290de8402a97a55408ad9bf3df",
+    "has-config": true,
     "color-background": "#f0ece3",
     "color-text": "#16140f"
+  },
+  {
+    "name": "Stintwell",
+    "description": "Stintwell is an ERP platform for professional services firms.",
+    "industry": "Finance Ops",
+    "filter-categories": [
+      "Finance"
+    ],
+    "url": "https://tse-demo-finance-ops-stintwell.se.thoughtspot.com/",
+    "video-url": "https://www.loom.com/share/a0cc110bb62c4eb4ad2e6037a060e057",
+    "has-config": true,
+    "color-background": "#4ade80",
+    "color-text": "#16140f"
+  },
+  {
+    "name": "Storeloom",
+    "description": "Storeloom is a unified retail commerce platform",
+    "industry": "Retail Sales",
+    "filter-categories": [
+      "Sales",
+      "Retail"
+    ],
+    "url": "https://tse-demo-retail-storeloom.se.thoughtspot.com/",
+    "video-url": "https://www.loom.com/share/4ec84bdf4cf847f9a72f58e35f356499",
+    "has-config": true,
+    "color-background": "#7B8CFF",
+    "color-text": "#16140f"
+  },
+  {
+    "name": "Crewmoth",
+    "description": "Crewmoth is an all-in-one HR platform",
+    "industry": "HR",
+    "filter-categories": [
+      "HR"
+    ],
+    "url": "https://tse-demo-hr-crewmoth.se.thoughtspot.com/",
+    "video-url": "https://www.loom.com/share/03eeee72502b4123ad16acafaa52095a",
+    "has-config": true,
+    "color-background": "#4F26E9",
+    "color-text": "#ffffff"
   },
   {
     "name": "PharmaSpot",
     "description": "Visibility across your pharma supply chain.",
     "industry": "Pharma Supply Chain",
+    "filter-categories": [
+      "Pharma",
+      "Supply Chain"
+    ],
     "url": "https://pharmaspot.se.thoughtspot.com",
+    "video-url": "",
+    "has-config": false,
     "color-background": "#2e1065",
     "color-text": "#f6f1ff"
   },
@@ -51,7 +125,12 @@
     "name": "SalesSpot",
     "description": "Pipeline performance, team activity, and AI-powered answers — all in one place.",
     "industry": "Sales Operations",
+    "filter-categories": [
+      "Sales"
+    ],
     "url": "https://salesspot.se.thoughtspot.com",
+    "video-url": "",
+    "has-config": false,
     "color-background": "#1a3a2b",
     "color-text": "#eef7f1"
   },
@@ -59,7 +138,10 @@
     "name": "Even more coming soon",
     "description": "Multiple industries being added.",
     "industry": "Other",
+    "filter-categories": [],
     "url": "",
+    "video-url": "",
+    "has-config": false,
     "color-background": "#dce8fb",
     "color-text": "#1c315d"
   }
