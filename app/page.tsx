@@ -49,30 +49,46 @@ export default function Home() {
               the talk track — so you can prep in minutes.
             </p>
           </div>
-          <aside className="checklist" aria-labelledby="checklist-title">
-            <p className="checklist-title" id="checklist-title">
-              Before you open a demo
-            </p>
-            {CHECKLIST.map((item) => (
-              <div className="checklist-item" key={item}>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M8 12.5l2.5 2.5L16 9.5" />
-                </svg>
-                <span>{item}</span>
-              </div>
-            ))}
-          </aside>
+          <div className="info-cards">
+            <aside className="info-card" aria-labelledby="checklist-title">
+              <p className="info-card-title" id="checklist-title">
+                Before you open a demo
+              </p>
+              {CHECKLIST.map((item) => (
+                <div className="checklist-item" key={item}>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M8 12.5l2.5 2.5L16 9.5" />
+                  </svg>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </aside>
+            <aside
+              className="info-card info-card-login"
+              aria-labelledby="login-title"
+            >
+              <p className="info-card-title" id="login-title">
+                For demos with a login page
+              </p>
+              <dl className="login-fields">
+                <dt>Email</dt>
+                <dd>Your ThoughtSpot email</dd>
+                <dt>Password</dt>
+                <dd>Anything, password is not validated</dd>
+              </dl>
+            </aside>
+          </div>
         </section>
 
         <DemoBrowser demos={orderedDemos} />
