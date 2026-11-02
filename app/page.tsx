@@ -5,9 +5,16 @@ import DemoBrowser, { type Demo } from "./demo-browser";
 
 const OTHER_INDUSTRY = "Other";
 
-const CHECKLIST = [
-  "Connected to Twingate VPN",
-  "Logged into PMM in the Primary org",
+const CHECKLIST: { label: string; hint: string; icon?: string }[] = [
+  {
+    label: "Connected to Twingate VPN",
+    hint: "It's an icon with two squares in your menu bar.",
+    icon: "/icon-twingate-vpn.png",
+  },
+  {
+    label: "Logged into PMM in the Primary org",
+    hint: "Open Okta and search for PMM Cloud.",
+  },
 ];
 
 export default function Home() {
@@ -55,7 +62,7 @@ export default function Home() {
                 Before you open a demo
               </p>
               {CHECKLIST.map((item) => (
-                <div className="checklist-item" key={item}>
+                <div className="checklist-item" key={item.label}>
                   <svg
                     width="20"
                     height="20"
@@ -70,7 +77,21 @@ export default function Home() {
                     <circle cx="12" cy="12" r="9" />
                     <path d="M8 12.5l2.5 2.5L16 9.5" />
                   </svg>
-                  <span>{item}</span>
+                  <div className="checklist-text">
+                    <span>{item.label}</span>
+                    <span className="checklist-hint">
+                      {item.hint}
+                      {item.icon && (
+                        <Image
+                          className="checklist-hint-icon"
+                          src={item.icon}
+                          alt="Twingate icon"
+                          width={25}
+                          height={25}
+                        />
+                      )}
+                    </span>
+                  </div>
                 </div>
               ))}
             </aside>
